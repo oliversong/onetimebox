@@ -9,7 +9,7 @@ Meteor.Router.add
 
 Meteor.Router.filters
   'clearErrors': (page)->
-    Meteor.Errors.clear()
+    Errors.clearSeen()
     return page
 
 Meteor.Router.filter('clearErrors')

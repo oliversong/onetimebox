@@ -1,4 +1,4 @@
-@boxesHandle = Meteor.subscribe 'boxes'
+@filesHandle = Meteor.subscribe 'files'
 
 Meteor.subscribe 'notifications'
 
