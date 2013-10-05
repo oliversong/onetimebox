@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "router": {},
+    "errors": {},
+    "accounts-ui-bootstrap-dropdown": {},
+    "spin": {}
+  }
+}
