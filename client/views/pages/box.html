@@ -1,13 +1,25 @@
 <template name="boxPage">
+  {{> header}}
+  {{> meteorErrors}}
   <div class="row-fluid">
-    <div class="span12 fileDrop">Drop files here</div>
+    <div class="span12 fileDrop">drop files here</div>
   </div>
   <div class="row-fluid space-above">
     <div class="span12 files">
-      Your files
+      <span class="proxima">your files</span>
       {{#each files}}
         {{> file}}
       {{/each}}
+    </div>
+  </div>
+  <div class="row-fluid float-in space-above2">
+    <div class="span12 proxima text-center">
+      You're good to go! Remember to share your box:
+    </div>
+  </div>
+  <div class="row-fluid float-in space-above proxima text-center">
+    <div class="span6 offset3">
+      <input type="text" class="myUrl"></input>
     </div>
   </div>
 </template>

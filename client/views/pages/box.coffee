@@ -41,6 +41,9 @@ Template.boxPage.rendered = ()->
           Meteor.call 'makeFile', file, (error, id)->
             if error
               Errors.throw(error.reason)
+        $('.myUrl').val(document.URL)
+        $(".float-in").addClass('float')
+
 
       onError: (type, message) ->
         Errors.throw("(" + type + ") " + message)

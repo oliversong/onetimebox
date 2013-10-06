@@ -1,20 +1,32 @@
+.brand{
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+}
+.topBar{
+  width: 100%;
+  height: 8px;
+  position: relative;
+  background-color: #1abc9c;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
 .beta{
   font-size: 10px;
   position: relative;
   top: -10px;
 }
-
 .fileDrop{
-  height: 100px;
+  height: 400px;
   position:relative;
   border: dashed 2px #CCC;
   background-color: #f7f7f9;
   text-align: center;
-  line-height: 100px;
-}
-.dropResult{
-  height: 100px;
-  position:relative
+  line-height: 400px;
+  font-size: 30px;
+  font-family: "proxima-nova",sans-serif;
 }
 .files{
   min-height: 100px !important;
@@ -26,4 +38,35 @@
 .file{
   line-height: 50px;
   border-top: 1px solid #CCC;
+  text-align: left;
+}
+.proxima{
+  font-size: 30px;
+  font-family: "proxima-nova",sans-serif;
+  line-height: 30px;
+}
+.space-above-small{
+  margin-top: 10px;
+}
+.space-above{
+  margin-top: 20px;
+}
+.space-above2{
+  margin-top: 40px;
+}
+.myUrl{
+  width: 100%;
+  height: 100%;
+}
+.float-in{
+  opacity: 0;
+  padding-top: 20px;
+  transition: opacity 0.5s;
+  transition: padding-top 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -webkit-transition: padding-top 0.5s;
+}
+.float{
+  opacity: 1;
+  padding-top: 0px;
 }
