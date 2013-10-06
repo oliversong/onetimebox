@@ -1,4 +1,5 @@
-@filesHandle = Meteor.subscribe 'files', Session.get('currentBoxId')
+Template.boxPage.created = ()->
+  @filesHandle = Meteor.subscribe 'files', Session.get('currentBoxId')
 
 Template.boxPage.helpers(
   currentBox: ()->
