@@ -1,4 +1,2 @@
 Meteor.publish 'files', ()->
-  return Files.find(
-    boxId: @boxId
-  )
+  return Files.find({})

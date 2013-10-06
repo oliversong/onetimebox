@@ -2,7 +2,7 @@ Meteor.Router.add
   '/': (->
     return 'landingPage'
   )
-  '/boxes/:_id':
+  '/box/:_id':
     to: 'boxPage'
     and: (id)->
       Session.set 'currentBoxId', id

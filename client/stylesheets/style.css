@@ -3,3 +3,22 @@
   position: relative;
   top: -10px;
 }
+.fileDrop {
+  height: 100px;
+  position: relative;
+  border: dashed 2px #CCC;
+  background-color: #f7f7f9;
+  text-align: center;
+  line-height: 100px;
+}
+.dropResult {
+  height: 100px;
+  position: relative;
+}
+.files {
+  min-height: 100px !important;
+  background-color: #f7f7f9;
+  border: solid #CCC 1px;
+  text-align: center;
+  line-height: 100px;
+}
