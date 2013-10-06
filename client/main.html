@@ -9,10 +9,20 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-  <div class="topBar"></div>
-  <div class="container">
-    <div id="main" class="row-fluid">
-      {{renderPage}}
+  <div class="wrap">
+    <div class="topBar"></div>
+    <div class="container">
+      {{> header}}
+      {{> meteorErrors}}
+      <div id="main" class="row-fluid">
+        {{renderPage}}
+      </div>
+      <div class="push"></div>
+    </div>
+  </div>
+  <div class="footer text-center">
+    <div class="container">
+      <p class="muted credit">Created at <a href="http://www.hackmit.org">HackMIT</a>, powered by <a href="http://www.meteor.com/">Meteor.js</a>, and built by <a href="http://www.olli.es">Oliver</a>.</p>
     </div>
   </div>
 </body>
