@@ -5,6 +5,7 @@ ______
 
 ## Bugs
 * Xorigin bug for only certain files...why?
+* Can't drop on first box page load
 
 ## Todo
 
