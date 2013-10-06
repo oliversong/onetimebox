@@ -1,7 +1,5 @@
 Meteor.Router.add
-  '/': (->
-    return 'landingPage'
-  )
+  '/': {to: 'landingPage', as: 'landing'}
   '/box/:_id':
     to: 'boxPage'
     and: (id)->

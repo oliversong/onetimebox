@@ -2,10 +2,13 @@
 
 Meteor.methods(
   makeFile: (fileDetails)->
-    file = _.extend(_.pick(fileDetails, 'boxId', 'url','name','size'),
-      userId: 'what'
-    )
+    file = _.pick(fileDetails, 'boxId', 'url','name','size', 'type')
 
     fileId = Files.insert(file)
     fileId
+)
+
+Files.allow(
+  remove: (userId, doc)->
+    true
 )

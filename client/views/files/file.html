@@ -1,7 +1,11 @@
 <template name="file">
-  <div class="file">
-    <span class="filename">{{this.name}}</span>
-    <span class="size">{{this.size}}</span>
-    <span class="url">{{this.url}}</span>
+  <div class="file row-fluid">
+    <div class="filename span6 offset1">{{this.name}}</div>
+    <div class="type span1 offset1">{{this.type}}</div>
+    <div class="size span1">{{size}}</div>
+    <div class="span2">
+      <a class="btn btn-primary download" href="{{this.url}}" download>Download</a>
+      <a class="btn btn-danger delete">Delete</a>
+    </div>
   </div>
 </template>

@@ -22,3 +22,11 @@
   text-align: center;
   line-height: 100px;
 }
+.file {
+  text-align: left;
+  line-height: 50px;
+  border-top: 1px solid #CCC;
+}
+.space-above{
+  margin-top: 20px;
+}

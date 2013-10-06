@@ -1,2 +1,3 @@
-Meteor.publish 'files', ()->
-  return Files.find({})
+Meteor.publish 'files', (boxId)->
+  console.log boxId
+  return Files.find({boxId:boxId})
