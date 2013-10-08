@@ -8,6 +8,8 @@ ______
 * Can't drop on first box page load
 
 ## Todo
+* Live total number of boxes / files
+* Live number of users connected to box
 
 ## Will not do
 * BigVideo dependencies are fucked in Meteor.js
