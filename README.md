@@ -7,7 +7,6 @@ ______
 * Xorigin bug for certain files- is this a filepicker issue?
 
 ## Todo
-* Live total number of boxes / files
 * Delete boxes / files that are 1 or 2 days old
 * Open source!!
 

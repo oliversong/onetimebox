@@ -1,5 +1,6 @@
 Template.landingPage.helpers(
-
+  count: ()->
+    FileCount.findOne().count
 )
 
 Template.landingPage.events(

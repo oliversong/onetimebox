@@ -3,6 +3,7 @@
     "router": {},
     "errors": {},
     "accounts-ui-bootstrap-dropdown": {},
-    "spin": {}
+    "spin": {},
+    "cron-tick": {}
   }
 }

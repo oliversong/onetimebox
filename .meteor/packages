@@ -10,3 +10,4 @@ coffeescript
 errors
 router
 spin
+cron-tick

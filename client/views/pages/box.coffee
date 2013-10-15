@@ -30,7 +30,7 @@ Template.boxPage.rendered = ()->
 
 
       onSuccess: (InkBlobs) ->
-        $(".fileDrop").text "Fuck yeah, done."
+        $(".fileDrop").text "Shazam, done."
         for ink in InkBlobs
           file =
             boxId: Session.get('currentBoxId')
