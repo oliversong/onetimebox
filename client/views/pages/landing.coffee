@@ -4,7 +4,7 @@ Template.landingPage.helpers(
     if fc
       fc.count
     else
-      6853
+      undefined
 )
 
 Template.landingPage.events(
