@@ -1,6 +1,10 @@
 Template.landingPage.helpers(
   count: ()->
-    FileCount.findOne().count
+    fc = FileCount.findOne()
+    if fc
+      fc.count
+    else
+      6853
 )
 
 Template.landingPage.events(
