@@ -5,11 +5,13 @@ ______
 
 ## Bugs
 * File drop sometimes doesn't work on initial pageload
-* Xorigin bug for certain files- is this a filepicker issue?
 * Router can't find own box because not subscribed...(todo when expire boxes)
+* Xorigin bug for certain files- is this a filepicker issue?
 
 ## Todo
-* Delete boxes / files that are 1 or 2 days old
+* Start adding timestamps to new boxes
+* After 2 days, delete all boxes that don't have a timestamp
+* Integrate Meteor Cron to Delete boxes that are 1 or 2 days old
 * Open source!!
 
 ## Will not do
