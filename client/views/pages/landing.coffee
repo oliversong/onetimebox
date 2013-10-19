@@ -1,6 +1,10 @@
 Template.landingPage.helpers(
   count: ()->
-    numberWithCommas(FileCount.findOne())
+    fc = FileCount.findOne()
+    if fc
+      numberWithCommas(fc.count)
+    else
+      ''
 )
 
 Template.landingPage.events(
@@ -14,5 +18,8 @@ Template.landingPage.events(
       Meteor.Router.to('/box/'+id)
 )
 
-numberWithCommas = (x) ->
-  x.toString().replace /\B(?=(\d{3})+(?!\d))/g, ","
+numberWithCommas = (x)->
+  if x is undefined
+    ''
+  else
+    x.toString().replace /\B(?=(\d{3})+(?!\d))/g, ","
