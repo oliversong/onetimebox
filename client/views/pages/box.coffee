@@ -30,7 +30,7 @@ Template.boxPage.dropPaneSet = false
 
 Template.boxPage.rendered = ()->
   unless Template.boxPage.dropPaneSet
-    filepicker.setKey('AwMdR1npIQQ6utPgLzd1Wz')
+    filepicker.setKey(filepickerKey)
 
     # create a drop pane
     filepicker.makeDropPane $(".fileDrop")[0],
