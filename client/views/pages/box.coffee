@@ -9,6 +9,23 @@ Template.boxPage.helpers(
     Files.find({boxId: Session.get('currentBoxId')})
 )
 
+Template.boxPage.events(
+  'click .altUpload': (e)->
+    filepicker.pickMultiple (InkBlobs)->
+      for ink in InkBlobs
+        file =
+          boxId: Session.get('currentBoxId')
+          url: ink.url
+          name: ink.filename
+          size: ink.size
+          type: ink.mimetype
+        Meteor.call 'makeFile', file, (error, id)->
+          if error
+            Errors.throw(error.reason)
+      $('.myUrl').val(document.URL)
+      $(".float-in").addClass('float')
+)
+
 Template.boxPage.dropPaneSet = false
 
 Template.boxPage.rendered = ()->
@@ -19,15 +36,16 @@ Template.boxPage.rendered = ()->
     filepicker.makeDropPane $(".fileDrop")[0],
       multiple: true
       dragEnter: ->
-        $(".fileDrop").html("Drop to upload").css
+        $(".fileDrop").css
           backgroundColor: "#E0E0E0"
           border: "1px solid #000"
+        $(".fileDrop div:first-child").html("Drop to upload")
 
       dragLeave: ->
-        $(".fileDrop").html("Drop files here").css
-          backgroundColor: "#F6F6F6"
-          border: "1px dashed #666"
-
+        $(".fileDrop").css
+            backgroundColor: "#F6F6F6"
+            border: "dashed 2px #CCC"
+        $(".fileDrop div:first-child").html("Drag files here")
 
       onSuccess: (InkBlobs) ->
         $(".fileDrop").text "Shazam, done."

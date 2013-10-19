@@ -23,6 +23,12 @@ html {
   position: relative;
   background-color: #1abc9c;
 }
+a {
+  color: #1abc9c;
+}
+a:hover {
+  color: #17ab8e;
+}
 .wrap {
   min-height: 100%;
   height: auto !important;
@@ -68,9 +74,16 @@ body {
   border: dashed 2px #CCC;
   background-color: #f7f7f9;
   text-align: center;
-  line-height: 400px;
   font-size: 30px;
   font-family: "proxima-nova", sans-serif;
+}
+.fileDrop div:first-child {
+  margin-top: 170px;
+}
+.altUpload {
+  margin-top: 12px;
+  line-height: 14px;
+  font-size: 14px;
 }
 .files {
   min-height: 100px !important;
@@ -83,6 +96,7 @@ body {
   line-height: 50px;
   border-top: 1px solid #CCC;
   text-align: left;
+  word-wrap: break-word;
 }
 .proxima {
   font-size: 30px;
@@ -155,10 +169,10 @@ h3 {
   background-image: url('/insp.png');
   background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: 100% 100px;
+  background-size: 100% 78px;
   width: 200px;
-  height: 50px;
-  margin-top: 30px;
+  height: 39px;
+  margin-top: 33px;
   position: relative;
   left: 50%;
   margin-left: -100px;
@@ -170,10 +184,10 @@ h3 {
   background-image: url('/at.png');
   background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: 100% 100px;
+  background-size: 100% 66px;
   width: 200px;
-  height: 50px;
-  margin-top: 30px;
+  height: 33px;
+  margin-top: 37px;
   position: relative;
   left: 50%;
   margin-left: -100px;
@@ -186,12 +200,12 @@ h3 {
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100% 160px;
-  width: 200px;
+  width: 160px;
   height: 80px;
   margin-top: 10px;
   position: relative;
   left: 50%;
-  margin-left: -100px;
+  margin-left: -80px;
 }
 .ilove:hover .iloveHolder {
   background-position: 0 100%;
