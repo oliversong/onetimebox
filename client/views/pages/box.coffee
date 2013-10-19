@@ -68,5 +68,6 @@ Template.boxPage.rendered = ()->
 
       onProgress: (percentage) ->
         $(".fileDrop div:first-child").html("Uploading (" + percentage + "%)")
+        $(".altUpload").remove()
 
     Template.boxPage.dropPaneSet = true
