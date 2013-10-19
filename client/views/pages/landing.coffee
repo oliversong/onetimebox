@@ -1,6 +1,6 @@
 Template.landingPage.helpers(
   count: ()->
-    FileCount.findOne()
+    numberWithCommas(FileCount.findOne())
 )
 
 Template.landingPage.events(
@@ -13,3 +13,6 @@ Template.landingPage.events(
           Meteor.Router.to('landingPage', error.details)
       Meteor.Router.to('/box/'+id)
 )
+
+numberWithCommas = (x) ->
+  x.toString().replace /\B(?=(\d{3})+(?!\d))/g, ","
