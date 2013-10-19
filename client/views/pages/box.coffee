@@ -48,7 +48,7 @@ Template.boxPage.rendered = ()->
         $(".fileDrop div:first-child").html("Drag files here")
 
       onSuccess: (InkBlobs) ->
-        $(".fileDrop").text "Shazam, done."
+        $(".fileDrop div:first-child").html("Shazam, done.")
         for ink in InkBlobs
           file =
             boxId: Session.get('currentBoxId')
@@ -67,6 +67,6 @@ Template.boxPage.rendered = ()->
         Errors.throw("(" + type + ") " + message)
 
       onProgress: (percentage) ->
-        $(".fileDrop").text "Uploading (" + percentage + "%)"
+        $(".fileDrop div:first-child").html("Uploading (" + percentage + "%)")
 
     Template.boxPage.dropPaneSet = true
