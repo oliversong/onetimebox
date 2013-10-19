@@ -29,8 +29,11 @@ Template.boxPage.events(
 Template.boxPage.dropPaneSet = false
 
 Template.boxPage.rendered = ()->
+  clip = new ZeroClipboard( $('.copyUrl'),
+    moviePath: "/ZeroClipboard.swf"
+  )
+
   unless Template.boxPage.dropPaneSet
-    debugger
     filepicker.setKey(Template.boxPage.filepickerKey)
 
     # create a drop pane
@@ -60,9 +63,8 @@ Template.boxPage.rendered = ()->
           Meteor.call 'makeFile', file, (error, id)->
             if error
               Errors.throw(error.reason)
-        $('.myUrl').val(document.URL)
+        $('#myUrl').val(document.URL)
         $(".float-in").addClass('float')
-
 
       onError: (type, message) ->
         Errors.throw("(" + type + ") " + message)
