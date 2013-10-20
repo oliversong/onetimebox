@@ -3,8 +3,15 @@ Meteor.Router.add
 
   '/box/:_id':
     to: (id)->
-      Session.set 'currentBoxId', id
-      'boxPage'
+      box = Boxes.findOne id
+      if box
+        # if the box exists, then redirect to it
+        Session.set 'currentBoxId', id
+        'boxPage'
+      else
+        # if not, then redirect to the sorry page
+        'sorryPage'
+
 
   '*': 'not_found'
 
