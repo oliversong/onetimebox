@@ -8,14 +8,15 @@
   <script type="text/javascript" src="//use.typekit.net/bpf7vbp.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
-<body>
+
+<template name="layout">
   <div class="wrap">
     <div class="topBar"></div>
     <div class="container">
       {{> header}}
       {{> meteorErrors}}
       <div id="main" class="row-fluid">
-        {{renderPage}}
+        {{ yield }}
       </div>
       <div class="push"></div>
     </div>
@@ -26,4 +27,4 @@
     </div>
   </div>
   {{> analytics}}
-</body>
+</template>

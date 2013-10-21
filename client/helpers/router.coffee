@@ -1,23 +1,28 @@
-Meteor.Router.add
-  '/': {to: 'landingPage', as: 'landing'}
+Router.configure
+  before: clearErrors
+  loadingTemplate: 'loading'
+  layoutTemplate: 'layout'
 
-  '/box/:_id':
-    to: (id)->
-      box = Boxes.findOne id
-      if box
-        # if the box exists, then redirect to it
-        Session.set 'currentBoxId', id
-        'boxPage'
-      else
-        # if not, then redirect to the sorry page
-        'sorryPage'
+Router.map ()->
+  @route('landingPage', {
+    path: '/'
+  })
 
+  @route('boxPage', {
+    path: '/box/:_id',
+    waitOn: ()->
+      Meteor.subscribe('box', @params._id)
+    notFoundTemplate: 'sorryPage'
+    data: ()->
+      _id = @params._id
+      Boxes.findOne({_id: _id})
+    before: ()->
+      Session.set('currentBoxId', @params._id)
+  })
 
-  '*': 'not_found'
+  @route('not_found', {
+    path: '*'
+  })
 
-Meteor.Router.filters
-  'clearErrors': (page)->
-    Errors.clearSeen()
-    return page
-
-Meteor.Router.filter('clearErrors')
+clearErrors = ()->
+  Errors.clearSeen()

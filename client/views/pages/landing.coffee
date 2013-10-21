@@ -14,8 +14,8 @@ Template.landingPage.events(
         Errors.throw(error.reason)
 
         if error.error is 302
-          Meteor.Router.to('landingPage', error.details)
-      Meteor.Router.to('/box/'+id)
+          Router.go('landingPage', error.details)
+      Router.go('/box/'+id)
 )
 
 numberWithCommas = (x)->

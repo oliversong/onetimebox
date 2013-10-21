@@ -1,8 +1,8 @@
 Meteor.publish 'files', (boxId)->
   return Files.find({boxId:boxId})
 
-Meteor.publish 'boxes', ()->
-  return Boxes.find()
+Meteor.publish 'box', (boxId)->
+  return Boxes.find({_id: boxId})
 
 # server: publish the current size of a collection
 Meteor.publish 'filecount', () ->

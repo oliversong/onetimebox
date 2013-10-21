@@ -1,9 +1,12 @@
 {
   "packages": {
-    "router": {},
     "errors": {},
     "accounts-ui-bootstrap-dropdown": {},
     "spin": {},
-    "cron-tick": {}
+    "cron-tick": {},
+    "iron-router": {
+      "git": "https://github.com/EventedMind/iron-router.git",
+      "branch": "dev"
+    }
   }
 }

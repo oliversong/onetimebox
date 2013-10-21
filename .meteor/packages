@@ -8,6 +8,6 @@ preserve-inputs
 bootstrap
 coffeescript
 errors
-router
 spin
 cron-tick
+iron-router
