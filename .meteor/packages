@@ -11,3 +11,4 @@ errors
 spin
 cron-tick
 iron-router
+http
