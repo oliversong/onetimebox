@@ -3,6 +3,7 @@
 Meteor.methods(
   makeFile: (fileDetails)->
     file = _.pick(fileDetails, 'boxId', 'url','name','size', 'type')
+    file.dateCreated = Math.round(new Date().getTime() / 1000)
 
     count = FileCount.findOne()
     FileCount.update(
@@ -12,6 +13,7 @@ Meteor.methods(
         $inc: {count: 1}
       }
     )
+
     fileId = Files.insert(file)
     fileId
 )

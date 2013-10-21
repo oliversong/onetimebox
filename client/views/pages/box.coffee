@@ -19,6 +19,7 @@ Template.boxPage.events(
           name: ink.filename
           size: ink.size
           type: ink.mimetype
+          inkBlob: ink
         Meteor.call 'makeFile', file, (error, id)->
           if error
             Errors.throw(error.reason)
@@ -34,7 +35,7 @@ Template.boxPage.rendered = ()->
   )
 
   unless Template.boxPage.dropPaneSet
-    filepicker.setKey(Template.boxPage.filepickerKey)
+    filepicker.setKey(Meteor.filepickerKey)
 
     # create a drop pane
     filepicker.makeDropPane $(".fileDrop")[0],
@@ -60,6 +61,7 @@ Template.boxPage.rendered = ()->
             name: ink.filename
             size: ink.size
             type: ink.mimetype
+            inkBlob: ink
           Meteor.call 'makeFile', file, (error, id)->
             if error
               Errors.throw(error.reason)
