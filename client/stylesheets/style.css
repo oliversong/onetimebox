@@ -187,12 +187,11 @@ h3 {
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100% 100px;
-  width: 200px;
+  width: 80%;
   height: 50px;
   margin-top: 30px;
   position: relative;
-  left: 50%;
-  margin-left: -100px;
+  left: 10%;
 }
 .lifehacker:hover .lifehackerHolder {
   background-position: 0 100%;
@@ -202,12 +201,11 @@ h3 {
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100% 78px;
-  width: 200px;
+  width: 80%;
   height: 39px;
   margin-top: 33px;
   position: relative;
-  left: 50%;
-  margin-left: -100px;
+  left: 10%;
 }
 .digital:hover .digitalHolder {
   background-position: 0 100%;
@@ -217,12 +215,11 @@ h3 {
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100% 66px;
-  width: 200px;
+  width: 80%;
   height: 33px;
   margin-top: 37px;
   position: relative;
-  left: 50%;
-  margin-left: -100px;
+  left: 10%;
 }
 .addictive:hover .addictiveHolder {
   background-position: 0 100%;
@@ -232,12 +229,11 @@ h3 {
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100% 160px;
-  width: 160px;
+  width: 60%;
   height: 80px;
   margin-top: 10px;
   position: relative;
-  left: 50%;
-  margin-left: -80px;
+  left: 20%;
 }
 .ilove:hover .iloveHolder {
   background-position: 0 100%;
