@@ -19,7 +19,6 @@ Template.boxPage.events(
           name: ink.filename
           size: ink.size
           type: ink.mimetype
-          inkBlob: ink
         Meteor.call 'makeFile', file, (error, id)->
           if error
             Errors.throw(error.reason)
@@ -61,7 +60,6 @@ Template.boxPage.rendered = ()->
             name: ink.filename
             size: ink.size
             type: ink.mimetype
-            inkBlob: ink
           Meteor.call 'makeFile', file, (error, id)->
             if error
               Errors.throw(error.reason)
