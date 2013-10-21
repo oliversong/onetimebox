@@ -21,10 +21,6 @@ $ cd onetimebox
 
 Now head over to https://www.inkfilepicker.com/ and register for an account. They'll provide you with an API key. You're going to put that key in `/lib/key.coffee`, like this:
 
-```
-$ touch /lib/key.coffee
-```
-
 Paste:
 
 ```
@@ -32,23 +28,16 @@ Paste:
 Meteor.filepickerKey = 'MyFilepickerAPIKey'
 ```
 
-You can also include Google Analytics. Go ahead and paste your Google Analytics code in `/client/views/includes/analytics.html`:
-
-```
-$ touch /client/views/includes/analytics.html
-```
+You can also include Google Analytics. Go ahead and paste your Google Analytics code in `/client/analytics.coffee`:
 
 Paste:
 
 ```
-<template name="analytics">
-  <head>
-    <script>
-      My Google Analytics Code
-    </script>
-  </head>
-</template>
+Template.layout.rendered = ()->
+  Google Analytics Coffeescript
 ```
+
+Note: You currently need to convert your Google Analytics JS to Coffeescript and paste it in here.
 
 Now do some development! Make whatever changes you'd like, and when you're all set, bundle and deploy. You can deploy to meteor servers, or EC2, heroku, or any of the normal alternatives. Meteor servers are the easiest, of course:
 
