@@ -1,7 +1,7 @@
 # Onetimebox
 Easily create and share single-use, live web folders.
 
-![Onetimebox](https://www.dropbox.com/s/rlgzipq5at9icwt/Screen%20Shot%202013-10-23%20at%202.12.19%20PM.png)
+![Onetimebox](http://f.cl.ly/items/2f1T2R340W2v0a3E272c/Screen%20Shot%202013-10-23%20at%202.12.19%20PM.png)
 
 # Want to roll your own? It's super easy!
 
