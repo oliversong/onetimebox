@@ -1,24 +1,28 @@
 # Onetimebox
 Easily create and share single-use, live web folders.
 
-## Want to roll your own? It's super easy!
+![Onetimebox](https://www.dropbox.com/s/rlgzipq5at9icwt/Screen%20Shot%202013-10-23%20at%202.12.19%20PM.png)
 
-First, install Meteor (http://www.meteor.com/):
+# Want to roll your own? It's super easy!
+
+## Install Meteor (http://www.meteor.com/):
+
 ```
 $ curl https://install.meteor.com | sh
 ```
 
-Then install Meteorite:
+## Install Meteorite:
 ```
 $ npm install -g meteorite
 ```
 
-Clone the repo:
+## Clone the repo:
 ```
 $ git clone git@github.com:oliversong/onetimebox.git
 $ cd onetimebox
 ```
 
+## Hook up filepicker
 Now head over to https://www.inkfilepicker.com/ and register for an account. They'll provide you with an API key. You're going to put that key in `/lib/key.coffee`, like this:
 
 Paste:
@@ -28,6 +32,7 @@ Paste:
 Meteor.filepickerKey = 'MyFilepickerAPIKey'
 ```
 
+## Hook up Google Analytics
 You can also include Google Analytics. Go ahead and paste your Google Analytics code in `/client/analytics.coffee`:
 
 Paste:
@@ -39,24 +44,26 @@ Template.layout.rendered = ()->
 
 Note: You currently need to convert your Google Analytics JS to Coffeescript and paste it in here.
 
+## Deploy
 Now do some development! Make whatever changes you'd like, and when you're all set, bundle and deploy. You can deploy to meteor servers, or EC2, heroku, or any of the normal alternatives. Meteor servers are the easiest, of course:
 
 ```
 meteor deploy [youronetimeboxname].meteor.com
 ```
 
-## Contributing
+# Contributing
 
 Onetimebox is an open source project. If you'd like to contribute, just submit a PR! Onetimebox can always be improved. It doesn't matter how experienced you are with Meteor, or whether you're familiar with real-time applications. There are plenty of ways to be helpful.
 
-### Dev workflow
+## Dev workflow
 
 To contribute, fork the main repo and make your own branch. When you're done developing, send in a PR and we'll take a look.
 
-### License
+# License
 
 The MIT License (MIT)
 
+```
 Copyright (c) 2013 Oliver Song
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -76,3 +83,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+```
