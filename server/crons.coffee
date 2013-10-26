@@ -1,6 +1,6 @@
 MyCron = new Cron()
 
-MyCron.addJob(1, ()->
+MyCron.addJob(60, ()->
   console.log "Garbage collecting old files and boxes..."
   # find all expired files and boxes and delete them, also remove files from filepicker
   # current timestamp
