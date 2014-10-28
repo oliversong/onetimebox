@@ -1,5 +1,5 @@
 Router.configure
-  before: clearErrors
+  onBeforeAction: clearErrors
   loadingTemplate: 'loading'
   layoutTemplate: 'layout'
 
@@ -16,7 +16,7 @@ Router.map ()->
     data: ()->
       _id = @params._id
       Boxes.findOne({_id: _id})
-    before: ()->
+    onBeforeAction: ()->
       Session.set('currentBoxId', @params._id)
   })
 
