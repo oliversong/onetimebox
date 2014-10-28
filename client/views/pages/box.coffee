@@ -10,6 +10,20 @@ Template.boxPage.helpers(
 )
 
 Template.boxPage.events(
+  'click .altUpload': (e)->
+    filepicker.pickMultiple (InkBlobs)->
+      for ink in InkBlobs
+        file =
+          boxId: Session.get('currentBoxId')
+          url: ink.url
+          name: ink.filename
+          size: ink.size
+          type: ink.mimetype
+        Meteor.call 'makeFile', file, (error, id)->
+          if error
+            Errors.throw(error.reason)
+      $('.myUrl').val(document.URL)
+      $(".float-in").addClass('float')
 )
 
 Template.boxPage.dropPaneSet = false
