@@ -7,8 +7,4 @@ standard-app-packages
 preserve-inputs
 bootstrap
 coffeescript
-errors
-spin
-cron-tick
-iron-router
 http
