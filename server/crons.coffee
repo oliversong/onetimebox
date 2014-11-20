@@ -5,14 +5,14 @@ MyCron.addJob(60, ()->
   # find all expired files and boxes and delete them, also remove files from filepicker
   # current timestamp
   ts = Math.round(new Date().getTime() / 1000)
-  expiredFiles = Files.find({dateCreated: {$lte: ts - 604800}}).fetch()
-  expiredBoxes = Boxes.find({dateCreated: {$lte: ts - 604800}}).fetch()
+  expiredFiles = Files.find({dateCreated: {$lte: ts - 86400}}).fetch()
+  expiredBoxes = Boxes.find({dateCreated: {$lte: ts - 86400}}).fetch()
   console.log("Found " + expiredBoxes.length + " expired boxes")
   console.log("Found " + expiredFiles.length + " expired files")
 
-  Boxes.remove({dateCreated: {$lte: ts - 604800}})
+  Boxes.remove({dateCreated: {$lte: ts - 86400}})
   console.log("Removed " + expiredBoxes.length + " boxes")
-  Files.remove({dateCreated: {$lte: ts - 604800}})
+  Files.remove({dateCreated: {$lte: ts - 86400}})
   console.log("Removed " + expiredFiles.length + " files")
 
   i = 0
